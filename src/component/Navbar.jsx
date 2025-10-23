@@ -4,7 +4,6 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
-import logo from '/public/logo.png';
 
 const NavLinks = [
   { href: '/platform', label: 'Platform' },
@@ -20,7 +19,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between mx-auto md:py-[30px] py-2 px-5">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src={logo} alt="Logo" width={100} height={100} />
+          <Image src="/Newlogo.png" alt="Logo" width={100} height={100} />
         </Link>
 
         {/* Desktop Menu */}
