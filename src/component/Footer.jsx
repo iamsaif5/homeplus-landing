@@ -2,6 +2,7 @@ import React from 'react';
 import Container from './Container';
 import Link from 'next/link';
 import Image from 'next/image';
+import logo from '/public/logo.png';
 
 const items = [
   {
@@ -42,7 +43,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-sm md:text-base text-white">
           <div>
             <Link href={'/'}>
-              <Image className="w-24 md:w-[130px]" src="/public/logo.png" alt="Logo" width={200} height={200} />
+              <Image className="w-24 md:w-[130px]" src={logo} alt="Logo" width={200} height={200} />
             </Link>
             <p className="my-4">Your digital home MOT logbook connected to the best local trades through Trade Pilot.</p>
             <p className="flex items-center gap-2">
