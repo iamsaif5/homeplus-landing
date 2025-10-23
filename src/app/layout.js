@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${manRope.variable} ${geistMono.variable} ${cormorantGaramond.variable} antialiased`}>
         <Navbar />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
