@@ -70,7 +70,7 @@ const Testimonials = () => {
             320: { slidesPerView: 1 },
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            1024: { slidesPerView: 4 },
             1536: { slidesPerView: 4 },
           }}
           speed={700}
