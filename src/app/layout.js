@@ -2,6 +2,8 @@ import { Geist, Geist_Mono, Manrope, Cormorant_Garamond } from 'next/font/google
 import './globals.css';
 import Navbar from '@/component/Navbar';
 import Footer from '@/component/Footer';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
