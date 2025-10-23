@@ -37,7 +37,7 @@ const Resources = () => {
     <Section>
       <Container>
         <div className="">
-          <span className="font-geist-mono font-medium uppercase text-[8px] md:text-[13px] text-[#3B3B33]">[more information]</span>
+          <span className="font-geist-mono font-medium uppercase text-[10px] md:text-[13px] text-[#3B3B33]">[more information]</span>
           <SubHeading>Resources & Information</SubHeading>
         </div>
 

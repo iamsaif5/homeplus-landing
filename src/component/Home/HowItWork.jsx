@@ -146,7 +146,7 @@ const HowItWork = () => {
     <Section>
       <Container>
         <div className="text-center">
-          <div className="font-geist-mono mx-auto uppercase flex max-w-max items-center text-black gap-4 text-[8px] bg-black/5 py-2 px-4 rounded-full md:text-[11px]">
+          <div className="font-geist-mono mx-auto uppercase flex max-w-max items-center text-black gap-4 text-[10px] bg-black/5 py-2 px-4 rounded-full md:text-[11px]">
             <span className="w-2 h-2  bg-black rounded-full shadow-2xl block"></span>
             <p>Never miss what matters</p>
           </div>

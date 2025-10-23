@@ -90,7 +90,7 @@ const Testimonials = () => {
     <Section>
       <Container>
         <div className="">
-          <span className="font-geist-mono font-medium uppercase text-[8px] md:text-[13px] text-[#3B3B33]">[Testimonials]</span>
+          <span className="font-geist-mono font-medium uppercase text-[10px] md:text-[13px] text-[#3B3B33]">[Testimonials]</span>
           <SubHeading>
             Trusted by Homeowners <br /> Across the UK
           </SubHeading>
@@ -99,9 +99,9 @@ const Testimonials = () => {
       <div className="block w-full  mt-10 md:mt-[62px]">
         <Slider {...settings}>
           {testimonials.map(t => (
-            <div key={t.name} className="px-4 md:px-[58px] border-r border-[#CCCCCC] py-5 md:py-[34px]">
-              <div className="mx-auto max-w-[650px] ">
-                <p className="relative text-center text-black text-sm md:text-base leading-relaxed px-4 md:px-6">
+            <div key={t.name} className="px-4 h-auto md:h-[330px] md:px-[58px] border-r border-[#CCCCCC] py-5 md:py-[34px]">
+              <div className="mx-auto flex  justify-between flex-col h-full max-w-[650px] ">
+                <p className="relative text-center  text-black text-sm md:text-base leading-relaxed px-4 md:px-6">
                   <svg
                     className=" absolute left-0 -top-3"
                     width="28"

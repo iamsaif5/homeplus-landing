@@ -16,7 +16,7 @@ const Simplify = () => {
 
       <Container>
         <div className="text-center relative z-1 ">
-          <div className="font-geist-mono mx-auto flex max-w-max items-center text-white gap-4 md:gap-8 bg-white/5 py-2 px-4 rounded-full text-[8px] md:text-[11px]">
+          <div className="font-geist-mono mx-auto flex max-w-max items-center text-white gap-4 md:gap-8 bg-white/5 py-2 px-4 rounded-full text-[10px] md:text-[11px]">
             <span className="w-2 h-2  bg-white rounded-full shadow-2xl block"></span>
             <p>NEW ERA: WE’VE CHNAGE OUR LOGO</p>
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

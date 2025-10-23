@@ -486,7 +486,7 @@ const YourHome = () => {
       <Container>
         {/* Title section */}
         <div className="text-center">
-          <div className="font-geist-mono mx-auto uppercase text-[8px] flex max-w-max items-center text-black gap-4 bg-black/5 py-2 px-4 rounded-full md:text-[11px]">
+          <div className="font-geist-mono mx-auto uppercase text-[10px] flex max-w-max items-center text-black gap-4 bg-black/5 py-2 px-4 rounded-full md:text-[11px]">
             <span className="w-2 h-2  bg-black rounded-full shadow-2xl block"></span>
             <p>Never miss what matters</p>
           </div>
@@ -533,7 +533,9 @@ const YourHome = () => {
               </div>
               <div className="lg:w-1/2 w-full">
                 <div>
-                  <span className="font-geist-mono font-medium uppercase text-[8px] md:text-[13px]  text-[#3B3B33]">[{content.badge}]</span>
+                  <span className="font-geist-mono font-medium uppercase text-[10px] md:text-[13px]  text-[#3B3B33]">
+                    [{content.badge}]
+                  </span>
                   <SubHeading className="">{content.title}</SubHeading>
                   <p className=" text-sm md:text-base text-black">{content.description}</p>
                   <Button className="my-[37px]" href={'#'} title={'Get Started Free'} />
