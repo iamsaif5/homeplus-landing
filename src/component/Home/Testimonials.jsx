@@ -73,7 +73,7 @@ const Testimonials = () => {
         breakpoint: 768,
         settings: {
           centerMode: true,
-          slidesToShow: 2,
+          slidesToShow: 1,
         },
       },
       {
@@ -90,18 +90,18 @@ const Testimonials = () => {
     <Section>
       <Container>
         <div className="">
-          <span className="font-geist-mono font-medium uppercase text-[13px] text-[#3B3B33]">[Testimonials]</span>
+          <span className="font-geist-mono font-medium uppercase text-[8px] md:text-[13px] text-[#3B3B33]">[Testimonials]</span>
           <SubHeading>
             Trusted by Homeowners <br /> Across the UK
           </SubHeading>
         </div>
       </Container>
-      <div className="block w-full  mt-[62px]">
+      <div className="block w-full  mt-10 md:mt-[62px]">
         <Slider {...settings}>
           {testimonials.map(t => (
-            <div key={t.name} className="px-4 md:px-[58px] border-r border-[#CCCCCC] py-[34px]">
+            <div key={t.name} className="px-4 md:px-[58px] border-r border-[#CCCCCC] py-5 md:py-[34px]">
               <div className="mx-auto max-w-[650px] ">
-                <p className="relative text-center text-black text-base leading-relaxed px-6">
+                <p className="relative text-center text-black text-sm md:text-base leading-relaxed px-4 md:px-6">
                   <svg
                     className=" absolute left-0 -top-3"
                     width="28"

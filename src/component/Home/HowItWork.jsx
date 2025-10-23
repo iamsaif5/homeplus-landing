@@ -146,19 +146,21 @@ const HowItWork = () => {
     <Section>
       <Container>
         <div className="text-center">
-          <div className="font-geist-mono mx-auto uppercase flex max-w-max items-center text-black gap-4 bg-black/5 py-2 px-4 rounded-full text-[11px]">
+          <div className="font-geist-mono mx-auto uppercase flex max-w-max items-center text-black gap-4 text-[8px] bg-black/5 py-2 px-4 rounded-full md:text-[11px]">
             <span className="w-2 h-2  bg-black rounded-full shadow-2xl block"></span>
             <p>Never miss what matters</p>
           </div>
           <Heading>How It Works</Heading>
           <Paragraph>Four simple steps to effortless home management</Paragraph>
         </div>
-        <div className="mt-[50px]">
+        <div className="mt-10 md:mt-[50px]">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {content.map((step, index) => (
               <div key={index} className="bg-white p-[18px] pb-10 rounded-md">
-                <div className="flex h-20 w-20 mb-[120px] rounded-md bg-light items-center justify-center ">{step.icon}</div>
-                <h3 className="text-[20px]  mb-3 font-medium text-[#3B3B33]">{step.title}</h3>
+                <div className="flex h-12 md:h-20 w-12 md:w-20 mb-16 md:mb-[120px] rounded-md bg-light items-center justify-center ">
+                  {step.icon}
+                </div>
+                <h3 className="text-lg md:text-[20px]  mb-3 font-medium text-[#3B3B33]">{step.title}</h3>
                 <p className="text-sm  text-[#3B3B33B2]">{step.description}</p>
               </div>
             ))}

@@ -486,7 +486,7 @@ const YourHome = () => {
       <Container>
         {/* Title section */}
         <div className="text-center">
-          <div className="font-geist-mono mx-auto uppercase flex max-w-max items-center text-black gap-4 bg-black/5 py-2 px-4 rounded-full text-[11px]">
+          <div className="font-geist-mono mx-auto uppercase text-[8px] flex max-w-max items-center text-black gap-4 bg-black/5 py-2 px-4 rounded-full md:text-[11px]">
             <span className="w-2 h-2  bg-black rounded-full shadow-2xl block"></span>
             <p>Never miss what matters</p>
           </div>
@@ -499,15 +499,15 @@ const YourHome = () => {
 
           {/* List item */}
           <div className="">
-            <ul className="mt-[34px] flex justify-center text-lg-white gap-8">
+            <ul className="mt-[34px] flex justify-center text-lg-white gap-4 md:gap-8 flex-wrap">
               {listItem.map((item, index) => (
                 <li key={index} className="flex items-center gap-3">
-                  <span className="bg-black h-6 w-6 rounded-full flex items-center justify-center">
+                  <span className="bg-black md:h-6 h-4 md:w-6 w-4 rounded-full flex items-center justify-center">
                     <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M10 3L4.5 8.5L2 6" stroke="white" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </span>
-                  <span className="text-base font-medium text-black">{item}</span>
+                  <span className="md:text-base text-sm font-medium text-black">{item}</span>
                 </li>
               ))}
             </ul>
@@ -518,7 +518,9 @@ const YourHome = () => {
           {mainContent.map((content, index) => (
             <div
               key={index}
-              className={` flex flex-col lg:flex-row items-center mt-[107px] gap-[72px] ${index % 2 == 0 ? 'lg:flex-row-reverse' : ''}`}
+              className={` flex flex-col lg:flex-row items-center mt-[60px] md:mt-[107px] gap-9 md:gap-[72px] ${
+                index % 2 == 0 ? 'lg:flex-row-reverse' : ''
+              }`}
             >
               <div className="lg:w-1/2 w-full">
                 <Image
@@ -526,19 +528,21 @@ const YourHome = () => {
                   height={1700}
                   src={content.image.src}
                   alt={content.title}
-                  className="w-full h-auto object-cover rounded-lg"
+                  className="w-full max-w-[330px] md:max-w-full mx-auto  h-auto object-cover rounded-lg"
                 />
               </div>
               <div className="lg:w-1/2 w-full">
                 <div>
-                  <span className="font-geist-mono font-medium uppercase text-[13px]  text-[#3B3B33]">[{content.badge}]</span>
+                  <span className="font-geist-mono font-medium uppercase text-[8px] md:text-[13px]  text-[#3B3B33]">[{content.badge}]</span>
                   <SubHeading className="">{content.title}</SubHeading>
-                  <p className=" text-base text-black">{content.description}</p>
+                  <p className=" text-sm md:text-base text-black">{content.description}</p>
                   <Button className="my-[37px]" href={'#'} title={'Get Started Free'} />
                   <ul className=" gap-4">
                     {content.listItem.map((item, idx) => (
                       <li key={idx} className="flex border-t py-6 border-[#3B3B3366] border-dashed items-center gap-4">
-                        <div className="h-[60px] w-[60px] flex bg-[#3B3B33] items-center justify-center rounded-md">{item.icon}</div>
+                        <div className="md:h-[60px] h-10 w-10 md:w-[60px] flex bg-[#3B3B33] items-center justify-center rounded-md">
+                          {item.icon}
+                        </div>
                         <p className="text-[#3B3B33] text-base">{item.text}</p>
                       </li>
                     ))}

@@ -1,6 +1,8 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import Button from './Button';
 
 const NavLinks = [
@@ -10,29 +12,68 @@ const NavLinks = [
 ];
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="  bg-white">
-      <div className="container flex items-center justify-between  mx-auto py-[30px]">
-        <Link href="/">
+    <nav className="bg-white border-b border-gray-100 z-50 relative">
+      <div className="container flex items-center justify-between mx-auto md:py-[30px] py-2 px-5">
+        {/* Logo */}
+        <Link href="/" className="flex items-center">
           <Image src="/logo.png" alt="Logo" width={100} height={100} />
         </Link>
-        {/* Menu */}
-        <ul className="flex space-x-11 text-sm ">
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-11 text-sm">
           {NavLinks.map(link => (
             <li key={link.href}>
-              <Link className=" opacity-60 duration-200 hover:opacity-100" href={link.href}>
+              <Link className="opacity-60 duration-200 hover:opacity-100" href={link.href}>
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
-        {/* CTA Button */}
-        <div className="flex items-center">
-          <Link href="/get-started" className="rounded-full opacity-60 hover:opacity-100 text-sm bg-primary px-6 py-2 ">
+
+        {/* CTA Buttons */}
+        <div className="hidden md:flex items-center gap-3">
+          <Link href="/get-started" className="rounded-full opacity-60 hover:opacity-100 text-sm bg-primary px-6 py-2 text-white">
             Sign in
           </Link>
           <Button href="/login" title="Sign up free" />
         </div>
+
+        {/* Mobile Menu Button */}
+        <button onClick={() => setMenuOpen(!menuOpen)} className="md:hidden text-gray-700 focus:outline-none">
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu (Animated) */}
+      <div
+        className={`absolute top-full left-0 w-full bg-white shadow-md md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+          menuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <ul className="flex flex-col items-center space-y-6 py-6 text-sm">
+          {NavLinks.map(link => (
+            <li key={link.href}>
+              <Link href={link.href} onClick={() => setMenuOpen(false)} className="opacity-70 hover:opacity-100 duration-200">
+                {link.label}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link
+              href="/get-started"
+              onClick={() => setMenuOpen(false)}
+              className="rounded-full text-sm bg-primary px-6 py-2 text-white opacity-80 hover:opacity-100"
+            >
+              Sign in
+            </Link>
+          </li>
+          <li>
+            <Button href="/login" title="Sign up free" />
+          </li>
+        </ul>
       </div>
     </nav>
   );

@@ -8,14 +8,14 @@ const listItem = ['No credit card required', 'Free forever - no premium tiers', 
 
 const Header = () => {
   return (
-    <header className="relative h-screen overflow-hidden">
+    <header className="relative py-[130px] md:py-[200px] overflow-hidden">
       <div className="absolute inset-0 bg-[url('/header.jpg')] bg-top bg-cover transform scale-x-[-1]" aria-hidden="true" />
       {/* dark overlay */}
       <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
       <div className="relative z-10 flex h-full items-center">
         <Container>
           <div>
-            <div className="font-geist-mono flex max-w-max items-center text-white gap-8 bg-white/5 py-2 px-4 rounded-full text-[11px]">
+            <div className="font-geist-mono flex max-w-max items-center text-white gap-4 md:gap-8 bg-white/5 py-2 px-4 rounded-full text-[8px] md:text-[11px]">
               <span className="w-2 h-2  bg-white rounded-full shadow-2xl block"></span>
               <p>NEW ERA: WE’VE CHNAGE OUR LOGO</p>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,21 +26,19 @@ const Header = () => {
                 />
               </svg>
             </div>
-            <h1 className="text-[64px] my-[34px] leading-18 text-white font-medium"></h1>
-
             <Heading isLight={true}>
               Your home runs <br /> better with Home +
             </Heading>
-            <Paragraph className="mb-[34px] ml-0 mr-auto" isLight={true}>
+            <Paragraph className="mb-5 md:mb-[34px] ml-0 mr-auto" isLight={true}>
               Your complete home management system. Maintenance, <br />
               trades, documents - all sorted. Forever free.
             </Paragraph>
             <Button isLight={true} href="#" title="Get Started Free" />
             <div>
-              <ul className="mt-[34px] flex text-lg-white gap-8">
+              <ul className="mt-5 md:mt-[34px] flex flex-col md:flex-row text-sm md:text-lg-white gap-3 md:gap-8 flex-wrap">
                 {listItem.map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
-                    <span className="bg-white h-6 w-6 rounded-full flex items-center justify-center">
+                    <span className="bg-white h-4 md:h-6 w-4 md:w-6 rounded-full flex items-center justify-center">
                       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 3L4.5 8.5L2 6" stroke="black" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>

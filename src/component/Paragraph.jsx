@@ -2,7 +2,9 @@ import React from 'react';
 
 const Paragraph = ({ children, isLight, className }) => {
   return (
-    <p className={`text-[16px] max-w-[700px] mx-auto ${isLight ? 'text-white opacity-90' : 'text-black opacity-50'} ${className}`}>
+    <p
+      className={`text-sm md:text-[16px] max-w-[700px] mx-auto ${isLight ? 'text-white opacity-90' : 'text-black opacity-50'} ${className}`}
+    >
       {children}
     </p>
   );

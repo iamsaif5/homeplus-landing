@@ -37,12 +37,12 @@ const items = [
 
 const Footer = () => {
   return (
-    <footer className="bg-black pt-[120px] pb-[70px] mt-40">
+    <footer className="bg-black pt-20 md:pt-[120px] pb-10  md:pb-[70px] mt-10 md:mt-40">
       <Container>
-        <div className="grid grid-cols-4 gap-10 text-base text-white">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-sm md:text-base text-white">
           <div>
             <Link href={'/'}>
-              <Image src="/logo.png" alt="Logo" width={200} height={200} />
+              <Image className="w-24 md:w-[130px]" src="/logo.png" alt="Logo" width={200} height={200} />
             </Link>
             <p className="my-4">Your digital home MOT logbook connected to the best local trades through Trade Pilot.</p>
             <p className="flex items-center gap-2">
@@ -62,7 +62,7 @@ const Footer = () => {
                   stroke-linejoin="round"
                 />
               </svg>
-              <span>Serving the UK</span>
+              <span className="text-sm">Serving the UK</span>
             </p>
             <Link className="flex items-center text-sm gap-2 mt-3" href={'mailto:hello@myhomeplus.io'}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +100,7 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex items-center justify-between mt-[140px] mb-[97px]">
+        <div className="flex gap-10  flex-col md:flex-row items-center justify-between mt-16 md:mt-[140px] mb-12 md:mb-[97px]">
           <p className="text-white text-sm">© 2025 Home+. All rights reserved.</p>
           <ul className="flex items-center flex-row gap-8">
             <li>
@@ -189,7 +189,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <p className="text-[#F8F8F3] text-[12px] max-w-[800px] opacity-70 ">
+        <p className="text-[#F8F8F3] text-[10px] md:text-[12px] max-w-[800px] opacity-70 ">
           This text is a legal disclaimer designed for the footer of a website. Begin with a statement acknowledging the company's
           registration status. This should include a placeholder for a generic location and a fictitious registration number, for example,
           "Registered in [Location], USA (No. XX-123456)". The text should mention the company's authorization under a specific state
