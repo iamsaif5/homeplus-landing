@@ -61,6 +61,7 @@ const Testimonials = () => {
     pauseOnHover: true, // Pause on hover for better user experience
     adaptiveHeight: true,
     centerMode: true,
+    mobileFirst: true,
     responsive: [
       {
         breakpoint: 1280,

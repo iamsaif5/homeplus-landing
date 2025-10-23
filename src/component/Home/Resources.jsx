@@ -62,7 +62,7 @@ const Resources = () => {
                     className="md:w-12 w-8 md:mt-12 mt-8 h-8  md:h-12 flex bg-white rounded-md items-center justify-center"
                   >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M19.5 12H3M13.5 5.625L19.875 12L13.5 18.375" stroke="#3B3B33" stroke-width="1.5" stroke-miterlimit="10" />
+                      <path d="M19.5 12H3M13.5 5.625L19.875 12L13.5 18.375" stroke="#3B3B33" strokeWidth="1.5" strokeMiterlimit="10" />
                     </svg>
                   </Link>
                 </div>
