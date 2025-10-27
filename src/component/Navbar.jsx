@@ -35,7 +35,7 @@ const Navbar = () => {
 
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
-          <Link href="/get-started" className="rounded-full opacity-60 hover:opacity-100 text-sm bg-primary px-6 py-2 text-white">
+          <Link href="#" className="rounded-full opacity-60 hover:opacity-100 text-sm bg-primary px-6 py-2 text-white">
             Sign in
           </Link>
           <Button href="#" title="Sign up free" />
