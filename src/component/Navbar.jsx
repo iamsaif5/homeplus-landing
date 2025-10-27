@@ -63,7 +63,7 @@ const Navbar = () => {
           ))}
           <li>
             <Link
-              href="/get-started"
+              href="#"
               onClick={() => setMenuOpen(false)}
               className="rounded-full text-sm bg-primary px-6 py-2 text-white opacity-80 hover:opacity-100"
             >
@@ -71,7 +71,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Button href="/login" title="Sign up free" />
+            <Button href="#" title="Sign up free" />
           </li>
         </ul>
       </div>
