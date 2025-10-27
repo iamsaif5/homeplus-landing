@@ -6,9 +6,9 @@ import { Menu, X } from 'lucide-react';
 import Button from './Button';
 
 const NavLinks = [
-  { href: '/platform', label: 'Platform' },
-  { href: '/services', label: 'Solutions' },
-  { href: '/contact', label: 'Resources' },
+  { href: '#', label: 'Platform' },
+  { href: '#', label: 'Solutions' },
+  { href: '#', label: 'Resources' },
 ];
 
 const Navbar = () => {
