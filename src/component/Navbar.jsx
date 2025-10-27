@@ -38,7 +38,7 @@ const Navbar = () => {
           <Link href="/get-started" className="rounded-full opacity-60 hover:opacity-100 text-sm bg-primary px-6 py-2 text-white">
             Sign in
           </Link>
-          <Button href="/login" title="Sign up free" />
+          <Button href="#" title="Sign up free" />
         </div>
 
         {/* Mobile Menu Button */}
