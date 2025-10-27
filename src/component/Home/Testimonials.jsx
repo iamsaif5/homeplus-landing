@@ -16,34 +16,68 @@ import john3 from '/public/john3.jpg';
 
 const testimonials = [
   {
-    name: 'John Doe',
-    feedback: 'The service was absolutely impeccable. I see myself and my family visiting here much more frequently.',
+    name: 'Priya K.',
+    location: 'Bromley',
+    role: 'Homeowner',
+    feedback: 'Reminders just happen. Boiler, alarms, gutters — sorted. Had three quotes in minutes and picked the best price.',
     avatar: john,
-    company: 'SomeCompany LLC.',
+    company: '',
   },
   {
-    name: 'Jane Smith',
-    feedback: 'I was so surprised at the quality of food. I didn’t expect it to be this good for how cheap it all was. Awesome!',
+    name: 'James R.',
+    location: 'Leeds',
+    role: 'Homeowner',
+    feedback: 'Everything for the house in one place. Exported a home pack and our sale moved faster with fewer questions.',
     avatar: john2,
-    company: 'AnotherCompany Inc.',
+    company: '',
   },
   {
-    name: 'Alice Johnson',
-    feedback: 'That was amazing! I loved the pancakes. I’ve never had that type of taste hit my mouth before. Unreal!',
+    name: 'Tom H.',
+    location: 'Reading',
+    role: 'Homeowner',
+    feedback: 'Uploaded EPC, warranties and receipts — now I can find anything in seconds. The alerts are spot on.',
     avatar: john3,
-    company: 'TechSolutions Co.',
+    company: '',
   },
   {
-    name: 'Bob Brown',
-    feedback: 'Incredible experience. The staff was very friendly and attentive. I will definitely be coming back here soon!',
+    name: 'Lara M.',
+    location: 'Brighton',
+    role: 'Homeowner',
+    feedback: 'Posted a leaking tap at lunch, three trusted quotes by mid-afternoon. Booked direct. Couldn’t be easier.',
     avatar: john,
-    company: 'BusinessCorp Ltd.',
+    company: '',
   },
   {
-    name: 'Alice Johnson 2',
-    feedback: 'That was amazing! I loved the pancakes. I’ve never had that type of taste hit my mouth before. Unreal!',
+    name: 'Rebecca W.',
+    location: 'Bristol',
+    role: 'Homeowner',
+    feedback: 'The 3-quote view is brilliant — clear reasons why each trade was matched and side-by-side pricing.',
+    avatar: john2,
+    company: '',
+  },
+  {
+    name: 'Maya D.',
+    location: 'St Albans',
+    role: 'Homeowner',
+    feedback: 'Home+ keeps us on top of renewals and maintenance. No more last-minute scrambles or missed warranties.',
     avatar: john3,
-    company: 'TechSolutions Co.',
+    company: '',
+  },
+  {
+    name: 'Owen P.',
+    location: 'Guildford',
+    role: 'Homeowner',
+    feedback: 'Great snapshot of our property value and what maintenance actually matters. Feels like a proper home MOT.',
+    avatar: john,
+    company: '',
+  },
+  {
+    name: 'Chloe S.',
+    location: 'Cambridge',
+    role: 'Homeowner',
+    feedback: 'Clean design, simple calendar, and real local trades. Saved time and about £100 on our boiler service.',
+    avatar: john2,
+    company: '',
   },
 ];
 
@@ -118,8 +152,10 @@ const Testimonials = () => {
                       <Image src={t.avatar} alt={t.name} fill sizes="128px" className="object-cover" />
                     </div>
                     <div>
-                      <div className="font-bold text-base text-black">{t.name}</div>
-                      <div className="text-sm text-[#4F4F4F]">{t.company}</div>
+                      <div className="font text-base text-black">
+                        <strong>{t.name}</strong> {t?.location} · {t?.role}
+                      </div>
+                      {/* <div className="text-sm text-[#4F4F4F]">{t.company}</div> */}
                     </div>
                   </div>
                 </div>

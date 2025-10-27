@@ -150,7 +150,7 @@ const HowItWork = () => {
             <span className="w-2 h-2  bg-black rounded-full shadow-2xl block"></span>
             <p>Never miss what matters</p>
           </div>
-          <Heading>How It Works</Heading>
+          <Heading>How it works</Heading>
           <Paragraph>Four simple steps to effortless home management</Paragraph>
         </div>
         <div className="mt-10 md:mt-[50px]">
