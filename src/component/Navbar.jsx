@@ -15,17 +15,17 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-b border-gray-100 z-50 relative">
-      <div className="container flex items-center justify-between mx-auto md:py-[30px] py-2 px-5">
+    <nav className="bg-white  border-b border-gray-100 z-50 relative">
+      <div className="container flex items-center justify-between mx-auto py-4 md:py-[30px]  px-5">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image src="/Newlogo.png" alt="Logo" width={100} height={100} />
+          <Image className="max-w-[70px] md:max-w-[100px]" src="/Newlogo.png" alt="Logo" width={500} height={500} />
         </Link>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-11 text-sm">
-          {NavLinks.map(link => (
-            <li key={link.href}>
+          {NavLinks.map((link, idx) => (
+            <li key={idx}>
               <Link className="opacity-60 duration-200 hover:opacity-100" href={link.href}>
                 {link.label}
               </Link>
@@ -54,8 +54,8 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col items-center space-y-6 py-6 text-sm">
-          {NavLinks.map(link => (
-            <li key={link.href}>
+          {NavLinks.map((link, id) => (
+            <li key={id}>
               <Link href={link.href} onClick={() => setMenuOpen(false)} className="opacity-70 hover:opacity-100 duration-200">
                 {link.label}
               </Link>
