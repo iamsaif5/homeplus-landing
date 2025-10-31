@@ -190,7 +190,11 @@ const Footer = () => {
         </div>
 
         <p className="text-[#F8F8F3] text-[10px] md:text-[12px] max-w-[800px] opacity-70">
-          {`This text is a legal disclaimer designed for the footer of a website. Begin with a statement acknowledging the company\'s registration status. This should include a placeholder for a generic location and a fictitious registration number, for example, \"Registered in [Location], USA (No. XX-123456)\". The text should mention the company\'s authorization under a specific state department, citing a relevant act. Include a placeholder for a license number, like \"Authorized by the [State Department of Business Oversight] under the [State Money Transmission Act] (License No. YZ-987654)\".`}
+          This text is a legal disclaimer designed for the footer of a website. Begin with a statement acknowledging the company&apos;s
+          registration status. This should include a placeholder for a generic location and a fictitious registration number, for example,
+          &quot;Registered in [Location], USA (No. XX-123456)&quot;. The text should mention the company&apos;s authorization under a
+          specific state department, citing a relevant act. Include a placeholder for a license number, like &quot;Authorized by the [State
+          Department of Business Oversight] under the [State Money Transmission Act] (License No. YZ-987654)&quot;.
         </p>
       </Container>
     </footer>
