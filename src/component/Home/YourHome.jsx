@@ -492,9 +492,9 @@ const YourHome = () => {
           </div>
           <Heading>Your home managed</Heading>
           <Paragraph>
-            Home+ is the UK's first intelligent home management system that combines maintenance scheduling, instant trade matching, and
-            document storage. Designed for UK homes, pre-loaded with legal requirements like Gas Safety Certificates, EICR testing, and EPC
-            ratings.
+            Home+ is the UK&apos;s first intelligent home management system that combines maintenance scheduling, instant trade matching,
+            and document storage. Designed for UK homes, pre-loaded with legal requirements like Gas Safety Certificates, EICR testing, and
+            EPC ratings.
           </Paragraph>
 
           {/* List item */}
