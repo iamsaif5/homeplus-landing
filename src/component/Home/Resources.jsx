@@ -34,7 +34,7 @@ const articles = [
 
 const Resources = () => {
   return (
-    <Section>
+    <Section className="pb-10 md:pb-40">
       <Container>
         <div className="">
           <span className="font-geist-mono font-medium uppercase text-[10px] md:text-[13px] text-[#3B3B33]">[more information]</span>

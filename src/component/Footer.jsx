@@ -37,7 +37,7 @@ const items = [
 
 const Footer = () => {
   return (
-    <footer className="bg-black pt-20 md:pt-[120px] pb-10  md:pb-[70px] mt-10 md:mt-40">
+    <footer className="bg-black pt-20 md:pt-[120px] pb-10  md:pb-[70px] ">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 text-sm md:text-base text-white">
           <div>
