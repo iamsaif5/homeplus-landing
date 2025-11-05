@@ -1,9 +1,9 @@
-const API_URL = 'https://lovable-fireworks-b08e821c72.strapiapp.com';
+const API_URL = 'https://reassuring-paradise-02bc2fb070.strapiapp.com';
 
 // Fetch All Article
 export async function fetchArticles() {
   try {
-    const response = await fetch(`${API_URL}/api/articles?populate=*&filters[Site][$eq]=Traning&pagination[pageSize]=100`, {
+    const response = await fetch(`${API_URL}/api/articles?populate=*&filters[Site][$eq]=homeplus&pagination[pageSize]=100`, {
       next: { revalidate: 300 },
     });
 

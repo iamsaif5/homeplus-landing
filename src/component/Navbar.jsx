@@ -8,7 +8,7 @@ import Button from './Button';
 const NavLinks = [
   { href: '#', label: 'Platform' },
   { href: '#', label: 'Solutions' },
-  { href: '#', label: 'Resources' },
+  { href: '/blogs', label: 'Resources' },
 ];
 
 const Navbar = () => {

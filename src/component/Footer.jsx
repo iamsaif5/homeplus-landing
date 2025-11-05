@@ -20,7 +20,7 @@ const items = [
       { link: '#', name: 'For homeowners' },
       { link: '#', name: 'For trades' },
       { link: '#', name: 'Quality guarantee' },
-      { link: '#', name: 'Blog' },
+      { link: '/blogs', name: 'Blog' },
     ],
   },
 
