@@ -7,6 +7,7 @@ import image2 from '/public/blog-2.png';
 import image3 from '/public/blog-3.png';
 import Image from 'next/image';
 import Link from 'next/link';
+import { fetchArticles } from '@/utils/api';
 
 const articles = [
   {
@@ -32,7 +33,9 @@ const articles = [
   },
 ];
 
-const Resources = () => {
+const Resources = async () => {
+  const articles = await fetchArticles();
+
   return (
     <Section className="pb-10 md:pb-40">
       <Container>
@@ -43,22 +46,22 @@ const Resources = () => {
 
         <div>
           <div className="mt-[62px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-            {articles.map((article, index) => (
+            {articles?.data?.map((article, index) => (
               <div key={index} className="bg-[#EDEDE2]  rounded-md overflow-hidden">
                 <Image
                   width={600}
                   height={600}
-                  src={article.image.src}
+                  src={article?.cover?.url || null}
                   alt={article.title}
                   className="w-full h-[200px] md:h-[281px] object-cover "
                 />
                 <div className="p-[18px] h-full ">
                   <div>
-                    <h3 className="text-[#3B3B33] font-medium mb-2 text-base md:text-[18px]">{article.title}</h3>
-                    <p className="text-[#3B3B33B2] text-sm md:text-[19px]">{article.description}</p>
+                    <h3 className="text-[#3B3B33] font-medium mb-2 text-base line-clamp-2 md:text-[18px]">{article.title}</h3>
+                    <p className="text-[#3B3B33B2] text-sm line-clamp-2 md:text-[15px]">{article.description}</p>
                   </div>
                   <Link
-                    href={article.link}
+                    href={`/blogs/${article?.slug ?? item?.attributes?.slug ?? article?.id}`}
                     className="md:w-12 w-8 md:mt-12 mt-8 h-8  md:h-12 flex bg-white rounded-md items-center justify-center"
                   >
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
