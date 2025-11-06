@@ -91,7 +91,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-3">
                 {item.links.map((linkItem, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link scroll={true} href={linkItem.link} className="hover:underline">
+                    <Link href={linkItem.name == 'Help center' ? 'mailto:hello@myhomeplus.io' : linkItem.link} className="hover:underline">
                       {linkItem.name}
                     </Link>
                   </li>
