@@ -46,7 +46,7 @@ const Resources = async () => {
 
         <div>
           <div className="mt-[62px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-            {articles?.data?.map((article, index) => (
+            {articles?.data?.slice(0, 3)?.map((article, index) => (
               <div key={index} className="bg-[#EDEDE2]  rounded-md overflow-hidden">
                 <Image
                   width={600}
