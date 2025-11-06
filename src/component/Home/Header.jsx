@@ -9,7 +9,7 @@ const listItem = ['No credit card required', 'Free forever - no premium tiers', 
 const Header = () => {
   return (
     <header className="relative py-[130px] md:py-[200px] overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/header.jpg')] bg-top bg-cover transform scale-x-[-1]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[url('/header.png')] bg-center bg-cover transform " aria-hidden="true" />
       {/* dark overlay */}
       <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
       <div className="relative z-10 flex h-full items-center">

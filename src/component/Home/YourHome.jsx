@@ -482,7 +482,7 @@ const mainContent = [
 
 const YourHome = () => {
   return (
-    <Section>
+    <Section id={'feature'}>
       <Container>
         {/* Title section */}
         <div className="text-center">

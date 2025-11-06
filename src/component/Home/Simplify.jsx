@@ -10,9 +10,9 @@ const listItem = ['No credit card required', 'Free forever - no premium tiers', 
 const Simplify = () => {
   return (
     <Section className={'relative  mt-14 md:mt-[162px] pb-[100px] md:pb-[162px]'}>
-      <div className="absolute inset-0 bg-[url('/simplify.png')] bg-center bg-cover transform scale-x-[-1]" aria-hidden="true" />
+      <div className="absolute inset-0 bg-[url('/simplify.png')] bg-top bg-cover transform scale-x-[-1]" aria-hidden="true" />
       {/* dark overlay */}
-      {/* <div className="absolute inset-0 bg-black/70" aria-hidden="true" /> */}
+      <div className="absolute inset-0 bg-black/40" aria-hidden="true" />
 
       <Container>
         <div className="text-center relative z-1 ">

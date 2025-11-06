@@ -143,7 +143,7 @@ const content = [
 
 const HowItWork = () => {
   return (
-    <Section>
+    <Section id="howItWork">
       <Container>
         <div className="text-center">
           <div className="font-geist-mono mx-auto uppercase flex max-w-max items-center text-black gap-4 text-[10px] bg-black/5 py-2 px-4 rounded-full md:text-[11px]">

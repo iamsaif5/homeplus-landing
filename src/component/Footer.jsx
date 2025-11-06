@@ -7,19 +7,19 @@ const items = [
   {
     title: 'Platform',
     links: [
-      { link: '#', name: 'Features' },
-      { link: '#', name: 'How it works' },
-      { link: '#', name: 'Pricing' },
+      { link: '/#feature', name: 'Features' },
+      { link: '/#howItWork', name: 'How it works' },
+      // { link: '#', name: 'Pricing' },
       { link: '#', name: 'Mobile app' },
     ],
   },
 
   {
-    title: 'Trade Pilot',
+    title: 'Home +',
     links: [
       { link: '#', name: 'For homeowners' },
       { link: '#', name: 'For trades' },
-      { link: '#', name: 'Quality guarantee' },
+      // { link: '#', name: 'Quality guarantee' },
       { link: '/blogs', name: 'Blog' },
     ],
   },
@@ -29,8 +29,8 @@ const items = [
     links: [
       { link: '#', name: 'Help center' },
       { link: '#', name: 'Contact us' },
-      { link: '#', name: 'Privacy policy' },
-      { link: '#', name: 'Terms of service' },
+      { link: '/privacy-policy', name: 'Privacy policy' },
+      { link: '/terms', name: 'Terms of service' },
     ],
   },
 ];
@@ -91,7 +91,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-3">
                 {item.links.map((linkItem, linkIndex) => (
                   <li key={linkIndex}>
-                    <Link href={linkItem.link} className="hover:underline">
+                    <Link scroll={true} href={linkItem.link} className="hover:underline">
                       {linkItem.name}
                     </Link>
                   </li>
