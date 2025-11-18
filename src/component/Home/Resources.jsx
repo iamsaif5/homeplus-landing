@@ -2,36 +2,9 @@ import React from 'react';
 import Section from '../Section';
 import Container from '../Container';
 import SubHeading from '../SubHeading';
-import image1 from '/public/blog-1.png';
-import image2 from '/public/blog-2.png';
-import image3 from '/public/blog-3.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { fetchArticles } from '@/utils/api';
-
-const articles = [
-  {
-    title: 'Smart Logistics',
-    description: 'Optimizing freight systems with data-driven strategies.',
-    link: '#',
-    image: image1,
-  },
-
-  {
-    title: 'Regenerative Agriculture',
-    description: 'Helping scale climate-smart practices that restore land health.',
-    link: '#',
-    image: image2,
-    link: '#',
-  },
-
-  {
-    title: 'Enviro-Intelligence',
-    description: 'Turning raw environmental data into actionable insight.',
-    link: '#',
-    image: image3,
-  },
-];
 
 const Resources = async () => {
   const articles = await fetchArticles();

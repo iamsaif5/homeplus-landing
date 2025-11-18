@@ -1,8 +1,12 @@
 import BLockWrapper from '@/component/blocks/BLockWrapper';
+import Container from '@/component/Container';
 import FacebookBtn from '@/component/FacebookBtn';
+import Resources from '@/component/Home/Resources';
+import Simplify from '@/component/Home/Simplify';
 import LinkedinBtn from '@/component/LinkedinBtn';
+import Section from '@/component/Section';
 import TwitterBtn from '@/component/TwitterBtn';
-import { fetchArticleBySlug, fetchAuthors } from '@/utils/api';
+import { fetchArticleBySlug, fetchArticles, fetchAuthors } from '@/utils/api';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -27,6 +31,7 @@ export default async function Page({ params }) {
   const article = await fetchArticleBySlug(params.slug);
   const authors = await fetchAuthors();
   const authorsPhoto = authors?.data?.find(item => item.email == article?.author?.email)?.avatar?.url;
+  const articles = await fetchArticles();
   if (!article) {
     notFound();
   }
@@ -40,7 +45,7 @@ export default async function Page({ params }) {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
-        className="pt-[137px] relative md:pt-[178px] pb-[50px] lg:pb-[153px] px-5 md:px-[60px]"
+        className="pt-[57px] relative md:pt-[50px] pb-[50px] lg:pb-[153px] px-5 md:px-[60px]"
       >
         <div className="text-xs lg:text-sm mb-6 lg:mb-[80px] text-white font-normal flex items-center gap-2">
           <Link className="" href={'/blogs'}>
@@ -144,6 +149,40 @@ export default async function Page({ params }) {
           </div>
         </article>
       </section>
+      <Section className="pb-10 md:pb-40 !pt-1 bg-white">
+        <Container>
+          <div>
+            <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+              {articles?.data?.slice(0, 3)?.map((article, index) => (
+                <div key={index} className="bg-[#EDEDE2]  rounded-md overflow-hidden">
+                  <Image
+                    width={600}
+                    height={600}
+                    src={article?.cover?.url || null}
+                    alt={article.title}
+                    className="w-full h-[200px] md:h-[281px] object-cover "
+                  />
+                  <div className="p-[18px] h-full ">
+                    <div>
+                      <h3 className="text-[#3B3B33] font-medium mb-2 text-base line-clamp-2 md:text-[18px]">{article.title}</h3>
+                      <p className="text-[#3B3B33B2] text-sm line-clamp-2 md:text-[15px]">{article.description}</p>
+                    </div>
+                    <Link
+                      href={`/blogs/${article?.slug ?? item?.attributes?.slug ?? article?.id}`}
+                      className="md:w-12 w-8 md:mt-12 mt-8 h-8  md:h-12 flex bg-white rounded-md items-center justify-center"
+                    >
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.5 12H3M13.5 5.625L19.875 12L13.5 18.375" stroke="#3B3B33" strokeWidth="1.5" strokeMiterlimit="10" />
+                      </svg>
+                    </Link>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </Section>
+      <Simplify gap={false} />
     </div>
   );
 }

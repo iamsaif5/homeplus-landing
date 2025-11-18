@@ -1,8 +1,8 @@
-import React from "react";
-import Image from "next/image";
-import { fetchArticles } from "@/utils/api";
-import Link from "next/link";
-import Button from "@/component/Button";
+import React from 'react';
+import Image from 'next/image';
+import { fetchArticles } from '@/utils/api';
+import Link from 'next/link';
+import Button from '@/component/Button';
 
 const page = async () => {
   const articles = await fetchArticles();
@@ -12,19 +12,16 @@ const page = async () => {
       <header
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.90) 5.68%, rgba(0, 0, 0, 0.31) 79.4%, rgba(255, 255, 255, 1) 100%)`,
-          backgroundBlendMode: "overlay",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundBlendMode: 'overlay',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
         className="pt-[187px] relative md:pt-[238px] pb-[50px] lg:pb-[203px] px-5 md:px-[60px]"
       >
         <div className="w-full relative z-10  mx-auto text-center">
-          <h1 className="font-medium tracking-[-4%] leading-[120%] text-5xl  lg:text-[68px] text-[#FCFCFD]">
-            Blogs
-          </h1>
+          <h1 className="font-medium tracking-[-4%] leading-[120%] text-5xl  lg:text-[68px] text-[#FCFCFD]">Blogs</h1>
           <p className="text-[#FCFCFD] text-left lg:text-center mx-auto  mt-[18px] md:mt-6 mb-[26px] md:mb-8 w-full lg:w-[70%] font-normal text-base md:text-lg">
-            Explore actionable strategies, expert insights, and practical guides
-            to transform your workplace dynamics.
+            Explore actionable strategies, expert insights, and practical guides to transform your workplace dynamics.
           </p>
         </div>
       </header>
@@ -32,12 +29,11 @@ const page = async () => {
       {/* Blogs */}
       <section className="px-5 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/** 🍀 Show only the first 3 blog items */}
-          {articles?.data?.slice(0, 3).map((item, idx) => {
+          {articles?.data?.map((item, idx) => {
             return (
               <div key={idx} className="pb-8 mb-[35px] overflow-hidden">
                 <Image
-                  alt={item.name || "Cover"}
+                  alt={item.name || 'Cover'}
                   width={200}
                   height={200}
                   src={item?.cover?.url || null}
@@ -46,24 +42,19 @@ const page = async () => {
 
                 <div className="mt-8 px-6">
                   <p className="text-secondary font-normal text-sm">
-                    {new Date(item.publishedAt).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
+                    {new Date(item.publishedAt).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
                     })}
                   </p>
 
-                  <h3
-                    title={item.title}
-                    className="text-[#18181B] font-medium text-2xl mt-3"
-                  >
+                  <h3 title={item.title} className="text-[#18181B] font-medium text-2xl mt-3">
                     {item.title}
                   </h3>
 
                   <Link
-                    href={`/blogs/${
-                      item?.slug ?? item?.attributes?.slug ?? item?.id
-                    }`}
+                    href={`/blogs/${item?.slug ?? item?.attributes?.slug ?? item?.id}`}
                     className="px-6 bg-black border-2 text-white mt-6 py-2 inline-block text-base font-medium hover:bg-transparent hover:text-black duration-200 border-black hover:border-primary cursor-pointer"
                   >
                     Read now

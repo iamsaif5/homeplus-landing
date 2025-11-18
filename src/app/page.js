@@ -13,7 +13,7 @@ export default function Home() {
       <HowItWork />
       <Simplify />
       <Testimonials />
-      <Resources />
+      <Resources title={true} />
     </>
   );
 }
