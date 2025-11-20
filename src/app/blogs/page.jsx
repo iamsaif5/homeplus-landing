@@ -32,8 +32,8 @@ const page = async () => {
       {/* Blogs */}
       <section className="px-5 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/** 🍀 Show only the first 3 blog items */}
-          {articles?.data?.slice(0, 3).map((item, idx) => {
+          {/** 🍀 Show all blog items */}
+          {articles?.data?.map((item, idx) => {
             return (
               <div key={idx} className="pb-8 mb-[35px] overflow-hidden">
                 <Image

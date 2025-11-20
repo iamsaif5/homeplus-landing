@@ -51,7 +51,7 @@ const Navbar = () => {
             Sign in
           </Link>
           <Button
-            href="#"
+            href="https://homeplus-eight.vercel.app/signup"
             title="Sign up free"
             className="
     bg-yellow-400 
@@ -105,7 +105,7 @@ const Navbar = () => {
           </li>
           <li>
             <Button
-              href="#"
+              href="https://homeplus-eight.vercel.app/login"
               title="Sign up free"
               className="
     bg-yellow-400 

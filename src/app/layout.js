@@ -9,7 +9,7 @@ import Navbar from "@/component/Navbar";
 import Footer from "@/component/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import GTM from "./gtm";
+// import GTM from "./gtm";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
 
         {/* Optional: Google Tag Manager */}
         {/* <GTM /> */}
-        <GTM />
+        {/* <GTM />963 */}
         <Navbar />
         <main>{children}</main>
         <Footer />
