@@ -45,8 +45,8 @@ const Navbar = () => {
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-3">
           <Link
-            href="#"
-            className="rounded-full opacity-60 hover:opacity-100 text-sm bg-primary px-6 py-2 text-white"
+            href="https://homeplus-eight.vercel.app/login"
+            className="opacity-60 hover:opacity-100 text-sm bg-primary px-6 py-2 text-black"
           >
             Sign in
           </Link>
@@ -61,8 +61,7 @@ const Navbar = () => {
     !shadow-none 
     !ring-0 
     !outline-none 
-    !border-none 
-    rounded-full
+    !border-none
   "
           />
         </div>
@@ -98,14 +97,14 @@ const Navbar = () => {
             <Link
               href="#"
               onClick={() => setMenuOpen(false)}
-              className="rounded-full text-sm bg-primary px-6 py-2 text-white opacity-80 hover:opacity-100"
+              className="rounded-full text-sm bg-primary px-6 py-2 text-black opacity-80 hover:opacity-100"
             >
               Sign in
             </Link>
           </li>
           <li>
             <Button
-              href="https://homeplus-eight.vercel.app/login"
+              href="#"
               title="Sign up free"
               className="
     bg-yellow-400 
