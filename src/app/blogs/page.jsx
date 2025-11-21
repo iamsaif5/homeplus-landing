@@ -3,7 +3,7 @@ import Image from "next/image";
 import { fetchArticles } from "@/utils/api";
 import Link from "next/link";
 import Button from "@/component/Button";
-
+import Simplify from "@/component/Home/Simplify";
 const page = async () => {
   const articles = await fetchArticles();
 
@@ -74,6 +74,12 @@ const page = async () => {
               </Link>
             );
           })}
+        </div>
+      </section>
+      {/* CTA add */}
+      <section className="w-full px-2 lg:px-10 pb-16 md:pb-24 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <Simplify />
         </div>
       </section>
     </div>
