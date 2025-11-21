@@ -17,7 +17,7 @@ const listItem = [
 
 const Header = () => {
   return (
-    <header className="relative pt-[80px] md:pt-[120px] overflow-hidden">
+    <header className="relative pt-[10px] md:pt-[20px] overflow-hidden">
       <div className=" absolute left-[5%] w-[90%]  mx-auto top-10  grid grid-cols-9 gap-10  pointer-events-none select-none">
         {Array.from({ length: 80 }).map((_, index) => (
           <div key={index} className="col-span-3  md:col-span-1 lg:col-span-1">
@@ -37,8 +37,8 @@ const Header = () => {
       <div className="relative z-10 flex h-full items-center">
         <Container>
           <div className="flex items-center flex-col">
-            <div className="font-geist-mono flex max-w-max items-center text-black gap-4 md:gap-8 bg-white/5 py-2 px-4 rounded-full text-[10px] md:text-[11px]">
-              <span className="w-2 h-2  bg-black rounded-full shadow-2xl block"></span>
+            <div className="font-geist-mono flex max-w-max items-center text-black gap-4 md:gap-8 bg-white/5 py-1 px-4 rounded-full text-[10px] md:text-[11px]">
+              {/* <span className="w-2 h-2  bg-black rounded-full shadow-2xl block"></span> */}
               {/* <p>NEW ERA: WE’VE CHNAGE OUR LOGO</p> */}
               <svg
                 width="12"
