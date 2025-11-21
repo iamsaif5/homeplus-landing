@@ -30,45 +30,48 @@ const page = async () => {
       </header>
 
       {/* Blogs */}
+
       <section className="px-5 lg:px-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {articles?.data?.map((item, idx) => {
+            const blogUrl = `/blogs/${
+              item?.slug ?? item?.attributes?.slug ?? item?.id
+            }`;
             return (
-              <div key={idx} className="pb-8 mb-[35px] overflow-hidden">
-                <Image
-                  alt={item.name || "Cover"}
-                  width={200}
-                  height={200}
-                  src={item?.cover?.url || null}
-                  className="h-[300px] object-cover w-full"
-                />
+              <Link
+                key={idx}
+                href={`/blogs/${
+                  item?.attributes?.slug || item?.slug || item?.id
+                }`}
+                className="block group"
+              >
+                <div className="pb-8 mb-[35px] overflow-hidden cursor-pointer">
+                  <Image
+                    alt={item.name || "Cover"}
+                    width={200}
+                    height={200}
+                    src={item?.cover?.url || null}
+                    className="h-[300px] object-cover w-full group-hover:scale-[1.02] transition duration-300"
+                  />
 
-                <div className="mt-8 px-6">
-                  <p className="text-secondary font-normal text-sm">
-                    {new Date(item.publishedAt).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </p>
+                  <div className="mt-8 px-6">
+                    <p className="text-secondary font-normal text-sm">
+                      {new Date(item.publishedAt).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </p>
 
-                  <h3
-                    title={item.title}
-                    className="text-[#18181B] font-medium text-2xl mt-3"
-                  >
-                    {item.title}
-                  </h3>
-
-                  <Link
-                    href={`/blogs/${
-                      item?.slug ?? item?.attributes?.slug ?? item?.id
-                    }`}
-                    className="px-6 bg-black border-2 text-white mt-6 py-2 inline-block text-base font-medium hover:bg-transparent hover:text-black duration-200 border-black hover:border-primary cursor-pointer"
-                  >
-                    Read now
-                  </Link>
+                    <h3
+                      title={item.title}
+                      className="text-[#18181B] font-medium text-2xl mt-3 group-hover:underline"
+                    >
+                      {item.title}
+                    </h3>
+                  </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
